@@ -22,6 +22,11 @@ library(tidyquant)
 library(readxl)
 library(writexl)
 
+# 
+library(conflicted)
+conflict_prefer("select", "dplyr")
+conflict_prefer("filter", "dplyr")
+
 # Excel Files
 bikes_tbl <- read_excel(path = "/2026F_金融資料庫管理與應用/Financial-database-analysis-2026/bike_data/bikes.xlsx")
 orderlines_tbl <- read_excel("/2026F_金融資料庫管理與應用/Financial-database-analysis-2026/bike_data/orderlines.xlsx")
