@@ -10,7 +10,10 @@ p_load(TTR)
 
 # import data
 # Make sure to convert to UTF-8
-etf_raw <- read.table("/2026F_金融資料庫管理與應用/ETF50_52_56/20260922072401.txt", 
+data_path <- file.path() 
+
+
+etf_raw <- read.table("/2026F_金融資料庫管理與應用/Financial-database-analysis-2026/ETF50_52_56/20260922072401.txt", 
                       header = TRUE,
                       sep          = "\t",
                       fileEncoding = "UTF-16LE",
@@ -69,7 +72,7 @@ names(etf_xts_list) <- names(etf_list)
 lapply(etf_xts_list, head)
 
 ## Import data in csv format
-etf3 <- read_csv("/2026F_金融資料庫管理與應用/ETF50_52_56/20260922100133_csv.csv", col_names = TRUE)
+etf3 <- read_csv("/2026F_金融資料庫管理與應用/Financial-database-analysis-2026/ETF50_52_56/20260922100133_csv.csv", col_names = TRUE)
 str(etf3)
 colnames(etf3) <- c('id', 'date', 'close')
 
